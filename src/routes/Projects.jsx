@@ -1,5 +1,3 @@
-
-
 const projects = [
   {
     title: "MyBrand Landing Page",
@@ -13,20 +11,21 @@ const projects = [
     desc: "Designed a visually appealing food delivery interface using HTML, CSS and Flexbox.",
     tags: ["HTML", "Flexbox", "CSS"],
     color: "from-orange-500 to-red-400",
-    link:"https://quickbite-web.netlify.app/"
+    link: "https://quickbite-web.netlify.app/"
   },
   {
     title: "TrekNorth Travel Website",
     desc: "Developed travel agency UI using advanced CSS techniques including variables and responsive layout.",
     tags: ["Advanced CSS", "Layouts"],
     color: "from-green-500 to-emerald-400",
-    link:"https://lambent-brioche-35f50a.netlify.app/"
+    link: "https://lambent-brioche-35f50a.netlify.app/"
   },
   {
     title: "Hostel Management System",
     desc: "Designed relational database system using MySQL for managing student records efficiently.",
     tags: ["MySQL", "Database", "Backend"],
     color: "from-purple-500 to-indigo-400",
+    link: "#" // Agar iska link nahi hai to filhal '#' rehne do
   }
 ];
 
@@ -80,9 +79,15 @@ function Projects() {
                 </p>
 
                 <div className="flex items-center justify-between mt-auto">
-                  <button className="flex items-center gap-2 font-bold text-gray-900 group-hover:gap-4 transition-all uppercase text-xs tracking-widest">
+                  {/* Clickable Link Button */}
+                  <a 
+                    href={p.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-bold text-gray-900 group-hover:gap-4 transition-all uppercase text-xs tracking-widest"
+                  >
                     View Project <span className="text-blue-600 text-xl">→</span>
-                  </button>
+                  </a>
                   
                   {/* Decorative Icon */}
                   <div className="opacity-10 group-hover:opacity-100 transition-opacity">
@@ -108,7 +113,6 @@ function Projects() {
               Get In Touch
             </a>
           </div>
-          {/* Abstract circle decoration */}
           <div className="absolute top-[-50%] right-[-10%] w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-20"></div>
         </div>
 
